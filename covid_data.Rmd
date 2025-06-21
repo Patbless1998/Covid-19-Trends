@@ -68,3 +68,21 @@ top_tested
 top_positive_rate <- covid_summary %>% filter(total_tested >= 100000) %>% arrange(desc(positivity_rate)) %>% slice_head(n=10) 
 top_positive_rate
 ```
+### Step5: Creating vectors and matrices to store key findings
+```{r vector-matrices}
+# Vector: Top 10 countries by total tests
+top_tested_countries <- top_tested$Country_Region
+# Vector: Top 10 countries by positivity rate
+top_positive_rate_countries <- top_positive_rate$Country_Region
+# Matrix: Countries and positivity rates
+positive_matrix <- cbind(
+  Country = top_positive_rate$Country_Region,
+  PositivityRate = round(top_positive_rate$positivity_rate, 2),
+  TotalTested = top_positive_rate$total_tested
+)
+# Show results
+top_tested_countries
+top_positive_rate_countries
+positive_matrix
+
+```
