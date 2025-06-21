@@ -60,3 +60,11 @@ head(covid_summary)
 ```
 
 ### Step4: Identify top countries by testing numbers and positive case ratios
+```{r top-countries}
+#Top 10 countries by number of test
+top_tested <- covid_summary %>% arrange(desc(total_tested)) %>% slice_head(n=10)
+top_tested
+#Top 10 countries by positivity rate(only countries with at least 100,000 tests)
+top_positive_rate <- covid_summary %>% filter(total_tested >= 100000) %>% arrange(desc(positivity_rate)) %>% slice_head(n=10) 
+top_positive_rate
+```
