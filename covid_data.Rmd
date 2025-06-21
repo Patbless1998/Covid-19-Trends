@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tibble)
 library(readr)
 library(dplyr)
+library(ggplot2)
 ```
 ### Step 1: Load and explore the COVID-19 dataset using readr and tibble
 ```{r load_data, echo=TRUE}
@@ -60,14 +61,38 @@ head(covid_summary)
 ```
 
 ### Step4: Identify top countries by testing numbers and positive case ratios
-```{r top-countries}
+```{r top-countries_total_test, warning=FALSE, message=FALSE}
 #Top 10 countries by number of test
 top_tested <- covid_summary %>% arrange(desc(total_tested)) %>% slice_head(n=10)
 top_tested
+
+#Bar Plot: Top 10 Countries by Total Tests
+ggplot(top_tested, aes(x = reorder(Country_Region, -total_tested), y = total_tested)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  labs(title = "Top 10 Countries by Total Tests", x = "Country", y = "Total Tests") +
+  coord_flip() +
+  theme_minimal()
+```
+
+**Interpretation:**
+
+The plot above shows that the **United States** leads by a large margin in total COVID-19 tests conducted, followed by countries like **Canada**, **Italy**, and **Israel**
+
+```{r top-countries-positivity_rate}
 #Top 10 countries by positivity rate(only countries with at least 100,000 tests)
 top_positive_rate <- covid_summary %>% filter(total_tested >= 100000) %>% arrange(desc(positivity_rate)) %>% slice_head(n=10) 
 top_positive_rate
+
+ggplot(top_positive_rate, aes(x = reorder(Country_Region, -positivity_rate), y = positivity_rate)) +
+  geom_bar(stat = "identity", fill = "darkred") +
+  labs(title = "Top 10 Countries by Positivity Rate", x = "Country", y = "Positivity Rate (%)") +
+  coord_flip() +
+  theme_minimal()
 ```
+**Interpretation:**
+
+This plot highlights countries with the highest COVID-19 positivity rates among those with over 100,000 tests
+
 ### Step5: Creating vectors and matrices to store key findings
 ```{r vector-matrices}
 # Vector: Top 10 countries by total tests
