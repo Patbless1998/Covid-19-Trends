@@ -86,3 +86,15 @@ top_positive_rate_countries
 positive_matrix
 
 ```
+### Step 6: Compile Results into a Comprehensive List Structure
+```{r summary-list}
+# Create a summary list of findings
+covid_summary_list <- list(
+  top_tested_countries = top_tested_countries,
+  top_positive_rate_countries = top_positive_rate_countries,
+  positive_matrix = positive_matrix
+)
+
+# View the structure of the list
+str(covid_summary_list)
+```
