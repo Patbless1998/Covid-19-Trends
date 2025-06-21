@@ -1,0 +1,26 @@
+install.packages("dplyr")
+install.packages("readr")
+install.packages("tibble")
+install.packages("knitr")
+install.packages("rmarkdown")
+library(tibble)
+knitr::opts_chunk$set(echo = TRUE)
+#Loading the necessary libries
+library(dplyr)
+library(readr)
+library(tibble)
+#Loading the dataset
+covid_data <- read.csv("tested_worldwide.csv")
+#show structure of the data
+glimpse(covid_data)
+head(covid_data)
+head(covid_data)
+sum(is.na())
+is.na()
+any(is.na(covid_data))
+sum(is.na(covid_data))
+#Missing values per column
+colSums(is.na(covid_data))
+#Show rows with missing values
+covid_data[!complete.cases(covid_data),]
+names(covid_data)

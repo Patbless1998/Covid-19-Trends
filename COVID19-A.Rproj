@@ -1,0 +1,34 @@
+---
+title: "Investigating COVID-19 Virus Trends"
+author: "Bless Tetteh"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#Loading the necessary libries
+library(dplyr)
+library(readr)
+library(tibble)
+```
+
+```{r echo=TRUE, eval=TRUE}
+#Loading the dataset
+covid_data <- read.csv("tested_worldwide.csv")
+#show structure of the data
+glimpse(covid_data)
+#view the first 6 rows of the dataset 
+head(covid_data)
+#Check if there are any missing data in the dataset
+any(is.na(covid_data))
+#Find the total missing values in the dataset
+sum(is.na(covid_data))
+#Missing values per column
+colSums(is.na(covid_data))
+#Show rows with missing values
+covid_data[!complete.cases(covid_data),]
+#Checking through the columns to select the crucial ones
+names(covid_data)
+```

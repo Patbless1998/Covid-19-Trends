@@ -1,0 +1,5 @@
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0","#load libraries"
+"0","library(tibble)"
+"0","library(readr)"
+"0","library(dplyr)"

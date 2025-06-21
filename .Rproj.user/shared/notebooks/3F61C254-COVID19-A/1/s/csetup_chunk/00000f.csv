@@ -1,0 +1,6 @@
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0",""
+"0","#Loading the necessary libries"
+"0","library(dplyr)"
+"0","library(readr)"
+"0","library(tibble)"

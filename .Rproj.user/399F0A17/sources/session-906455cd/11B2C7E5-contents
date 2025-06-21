@@ -1,0 +1,10 @@
+install.packages("dplyr")
+install.packages("readr")
+install.packages("tibble")
+library(tibble)
+
+# Convert a base data frame to a tibble
+df <- data.frame(x = 1:3, y = c("a", "b", "c"))
+df
+tb <- as_tibble(df)
+tb
