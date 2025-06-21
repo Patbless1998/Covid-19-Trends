@@ -58,3 +58,5 @@ covid_summary <- covid_summary %>%
 #view result
 head(covid_summary)
 ```
+
+### Step4: Identify top countries by testing numbers and positive case ratios
