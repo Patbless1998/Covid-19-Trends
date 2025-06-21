@@ -12,30 +12,30 @@ In this analysis, I:
 - Created visualizations to highlight key insights
 - Compiled results into a structured R list
 
-## 🧰 Tools and Libraries
+## Tools and Libraries
 
 - **R** (via RStudio)
-- `dplyr`, `readr`, `tibble`, `ggplot2`, `janitor`
+- `dplyr`, `readr`, `tibble`, `ggplot2`
 - Git & GitHub for version control
 
-## 📊 Key Findings
+## Key Findings
 
 - The **United States** conducted the highest number of COVID-19 tests globally.
-- **Mexico** and **Iran** had the highest positivity rates among countries with >100,000 tests, indicating possible under-testing.
+- **Ecuador** and **Lombardy** had the highest positivity rates among countries with >100,000 tests, indicating possible under-testing.
 - Visualizations and summary statistics provide insight into testing efforts and case detection efficiency.
 
-## 📁 Files Included
+## Files Included
 
 - `covid_data.Rmd` – Source R Markdown file
 - `covid_data.html` – Rendered report (HTML)
 - `tested_worldwide.csv` – Original dataset
 - `README.md` – This file
 
-## 📈 Dataset Source
+## Dataset Source
 
-[COVID-19 Worldwide Testing Dataset on Kaggle](https://www.kaggle.com/datasets/imdevskp/corona-virus-report)
+[COVID-19 Worldwide Testing Dataset on Kaggle](https://www.kaggle.com/datasets/lin0li/covid19testing)
 
-## ✅ How to Run
+## How to Run
 
 1. Open `covid_data.Rmd` in RStudio.
 2. Run each chunk or use **Knit** to generate the final report.
