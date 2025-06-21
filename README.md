@@ -2,7 +2,7 @@
 
 This project analyzes a global COVID-19 dataset to identify trends in testing and positivity rates across countries.
 
-## 📌 Overview
+## Overview
 
 In this analysis, I:
 - Loaded and explored real COVID-19 data
@@ -41,6 +41,5 @@ In this analysis, I:
 2. Run each chunk or use **Knit** to generate the final report.
 3. View `covid_data.html` for the visualized output.
 
----
-
-> This is a beginner-level portfolio project to demonstrate foundational data analysis skills in R.
+# Author
+- Ebenezer Tetteh
